@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>bukahHehejhajl</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#fff5f7;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+    }
+
+    .card{
+      width:350px;
+      background:white;
+      padding:30px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.1);
+      transition:0.5s;
+    }
+
+    img{
+      width:170px;
+      border-radius:20px;
+      margin-bottom:20px;
+    }
+
+    h1{
+      color:#ff6f91;
+      margin-bottom:15px;
+      font-size:32px;
+    }
+
+    p{
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    button{
+      border:none;
+      padding:12px 24px;
+      border-radius:20px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+      margin:5px;
+    }
+
+    .pink{
+      background:#ff8fab;
+      color:white;
+    }
+
+    .green{
+      background:#95d5b2;
+      color:white;
+    }
+
+    button:hover{
+      transform:scale(1.05);
+    }
+
+    .hidden{
+      display:none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE 1 -->
+  <div class="card" id="page1">
+    <img src="snoopy.jpg"> 
+
+    <h1>10 things im grateful about yo!</h1>
+
+    <p>
+     HI
+    </p>
+
+    <button class="pink" onclick="nextPage()">
+      next !!
+    </button>
+  </div>
+
+  <!-- PAGE 2 -->
+  <div class="card hidden" id="page2">
+
+    <img src="snoopy2.jpg">
+
+    <p>buka</p>
+
+    <button class="pink" onclick="openLetter()">
+      Ye
+    </button>
+
+    <button class="green" onclick="noButton()">
+      No
+    </button>
+  </div>
+
+  <!-- PAGE 3 -->
+  <div class="card hidden" id="page3">
+
+    <img src="snoopy3.jpg">
+
+    <h1>buka</h1>
+
+    <p>buka </p>
+
+    <button class="pink" onclick="backToQuestion()">
+      BUKA
+    </button>
+  </div>
+
+  <!-- PAGE 4 -->
+  <div class="card hidden" id="page4">
+
+    <img src="snoopy4.gif">
+
+    <h1>10 things i like about you!</h1>
+
+    <p>
+    1. you
+    2. you
+    3. you
+    4. you 
+    5. you
+    6. you
+    7. you
+    8. you
+    9. you
+    10. you    
+    </p>
+    <p>ye</p>
+
+  </div>
+
+  <script>
+
+    function nextPage(){
+      document.getElementById("page1").classList.add("hidden");
+      document.getElementById("page2").classList.remove("hidden");
+    }
+
+    function noButton(){
+      document.getElementById("page2").classList.add("hidden");
+      document.getElementById("page3").classList.remove("hidden");
+    }
+
+    function backToQuestion(){
+      document.getElementById("page3").classList.add("hidden");
+      document.getElementById("page2").classList.remove("hidden");
+    }
+
+    function openLetter(){
+      document.getElementById("page2").classList.add("hidden");
+      document.getElementById("page4").classList.remove("hidden");
+    }
+
+  </script>
+
+</body>
+</html>
